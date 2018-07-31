@@ -33,12 +33,12 @@ import org.junit.runner.RunWith;
  * @author <a href="mailto:manovotn@redhat.com">Matej Novotny</a>
  */
 @RunWith(Arquillian.class)
-public class CombinedInterceptorsOnEJBBeanTest {
+public class CombinedInterceptorsOnEJBBeanTestCase {
 
     @Deployment
     public static Archive<?> getDeployment() {
         return ShrinkWrap.create(JavaArchive.class)
-            .addPackage(CombinedInterceptorsOnEJBBeanTest.class.getPackage())
+            .addPackage(CombinedInterceptorsOnEJBBeanTestCase.class.getPackage())
             .addAsManifestResource(createBeansXml(), "beans.xml");
     }
 
